@@ -1,0 +1,39 @@
+
+.button-color {
+    background-color: #a8b1ce;
+    color: #d9c505;
+    border: 1px solid black;
+}
+.start-icon{
+    color: #d9c505;
+}
+.Payment-Unverified1{
+		padding-top: 5px;
+		padding-left: 5px;
+	background-color: #fc0200;
+	border-radius: 15px;	
+}
+.Payment-Unverified1 i{
+	padding-left: 50px;
+	padding-right: 10px;
+	padding: 2px;
+	color: #50bc23;
+	background-color: white;
+	height: 18px;
+	width: 18px;
+	border-radius: 18px;
+}
+.card-items1{
+		color: whitesmoke;
+		background-color: #0b35c5;
+		border-radius: 25px;
+		padding-top: 5px;
+        margin-right: 5px;
+		}	
+	.card-items1 h6{
+		color: whitesmoke;
+	}
+    .card-border{
+        border: 1px solid black;
+        border-radius: 30px;
+    }
