@@ -1,6 +1,23 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import { Provider } from 'react-redux'
+// import configureStore from './store';
+// import './index.css';
+// import App from './App';
+// import registerServiceWorker from './registerServiceWorker';
+// ReactDOM.render(
+//   <Provider store={configureStore()}>
+//     <AppRouter />
+//   </Provider>,
+//   document.getElementById('root')
+// );
+// registerServiceWorker();
+
+
+
+
 import React from "react";
 import ReactDOM from "react-dom";
-
 import AppRouter from "./approuter";
 // import * as serviceWorker from './client/serviceWorker';
 
@@ -30,9 +47,14 @@ if (
   require("./client/assets/css/style.css");
 }
 
-ReactDOM.render(<AppRouter />, document.getElementById("root"));
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
+
+registerServiceWorker();
+
 
 if (module.hot) {
   // enables hot module replacement if plugin is installed
   module.hot.accept();
 }
+
+

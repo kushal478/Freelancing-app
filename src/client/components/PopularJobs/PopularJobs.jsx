@@ -17,7 +17,7 @@ class PopularJobs extends Component {
             <section className="PopularJobs">
                 <div className="container">
 
-                    {/* <section className="d-flex justify-content-end">
+                    <section className="d-flex justify-content-end">
                         <button class="btn button-color btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Find Job By Filter</button>
                         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                             <div class="offcanvas-header">
@@ -28,11 +28,11 @@ class PopularJobs extends Component {
                                 <h6>Work From Home</h6>
                             </div>
                         </div>
-                    </section> */}
+                    </section>
 
                     <div className="row d-felx justify-content-center">
-                        <div className="col-lg-7 my-3">
-                            <div className="p-3 card-border ">
+                        <div className="col-lg-7 card-shadow  my-3">
+                            <div className="p-3 ">
                                 <div className="row">
                                     <div className="col-lg-9">
                                         <h5>Angular Developer</h5>
