@@ -13,7 +13,7 @@ import cardimg1 from '../../assets/Images&icons/TonyStark.png';
 class PopularJobs extends Component {
     render() {
 
-        return (
+        return ( 
             <section className="my-3 ">
                 <div className="container-fluid">
                     <div className="row" id="parent">

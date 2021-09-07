@@ -10,7 +10,7 @@ import img01 from '../../../assets/Images&icons/introImage1.png';
 
 
 import service01 from "../../../assets/images/services/service-01.jpg";
-import service02 from "../../../assets/images/services/service-02.jpg";
+import service02 from "../../../assets/img/game1.jpg";
 import service03 from "../../../assets/images/services/service-03.jpg";
 import service04 from "../../../assets/images/services/service-04.jpg";
 import service05 from "../../../assets/images/services/service-05.jpg";
@@ -33,40 +33,41 @@ class Popular extends Component {
 	render() {
 
 
-		// const settings2 = {
-		// 	dots: true,
-		// 	slidesToShow: 2,
-		// 	slidesToScroll: 2,
+		const settings2 = {
+			dots: true,
+			slidesToShow: 2,
+			slidesToScroll: 2,
 
-		// 	// variableWidth: true,
-		// 	arrows: false,
+			// variableWidth: true,
+			arrows: false,
 
-		// 	responsive: [
-		// 		{
-		// 			breakpoint: 400,
-		// 			settings: {
-		// 				slidesToShow: 1,
-		// 				slidesToScroll: 1,
-		// 				infinite: true,
+			responsive: [
+				{
+					breakpoint: 400,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
 
-		// 			}
-		// 		},
-		// 		{
-		// 			breakpoint: 993,
-		// 			settings: {
-		// 				slidesToShow: 1,
-		// 				slidesToScroll: 1,
-		// 				infinite: true,
+					}
+				},
+				{
+					breakpoint: 993,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
 
-		// 			}
-		// 		}
-		// 	]
-		// };
+					}
+				}
+			]
+		};
 
 		const settings = {
 			dots: true,
-			slidesToShow: 1,
+			slidesToShow: 2,
 			slidesToScroll: 1,
+
 			// variableWidth: true,
 			arrows: false,
 
@@ -112,437 +113,18 @@ class Popular extends Component {
 								</div>
 							</div>
 
-							<div className="row">
-								<div className="col-lg-4">
-									<a href="">
-									<div className="service-widget p-3">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="">
-												<h5 className="color-blue">Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content mt-4">
-												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5  text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5 text-center  ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row text-center mt-4">
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">$ 3000</h6>
-														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">1 Month</h6>
-														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">Intermediate</h6>
-														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
-													</div>
-												</div>
-												<div className="mt-2">
-													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
-												</div>
-												<div className="row mt-4">
-													<div className="col-lg-7 ">
-														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
-													</div>
-													<div className="col-lg-5">
-														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
-													</div>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-
-								<div className="col-lg-4">
-									<a href="">
-										<div className="service-widget p-3">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="">
-												<h5 className="color-blue">Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content mt-4">
-												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5  text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5 text-center  ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row text-center mt-4">
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">$ 3000</h6>
-														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">1 Month</h6>
-														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">Intermediate</h6>
-														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
-													</div>
-												</div>
-												<div className="mt-2">
-													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
-												</div>
-												<div className="row mt-4">
-													<div className="col-lg-7 ">
-														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
-													</div>
-													<div className="col-lg-5">
-														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
-													</div>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-
-								<div className="col-lg-4">
-									<a href="">
-									<div className="service-widget p-3">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="">
-												<h5 className="color-blue">Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content mt-4">
-												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5  text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5 text-center  ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row text-center mt-4">
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">$ 3000</h6>
-														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">1 Month</h6>
-														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">Intermediate</h6>
-														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
-													</div>
-												</div>
-												<div className="mt-2">
-													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
-												</div>
-												<div className="row mt-4">
-													<div className="col-lg-7 ">
-														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
-													</div>
-													<div className="col-lg-5">
-														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
-													</div>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-
-							<div className="row mt-4">
-								<div className="col-lg-4">
-									<a href="">
-									<div className="service-widget p-3">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="">
-												<h5 className="color-blue">Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content mt-4">
-												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5  text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5 text-center  ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row text-center mt-4">
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">$ 3000</h6>
-														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">1 Month</h6>
-														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">Intermediate</h6>
-														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
-													</div>
-												</div>
-												<div className="mt-2">
-													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
-												</div>
-												<div className="row mt-4">
-													<div className="col-lg-7 ">
-														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
-													</div>
-													<div className="col-lg-5">
-														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
-													</div>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-
-								<div className="col-lg-4">
-									<a href="">
-									<div className="service-widget p-3">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="">
-												<h5 className="color-blue">Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content mt-4">
-												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5  text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5 text-center  ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row text-center mt-4">
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">$ 3000</h6>
-														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">1 Month</h6>
-														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">Intermediate</h6>
-														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
-													</div>
-												</div>
-												<div className="mt-2">
-													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
-												</div>
-												<div className="row mt-4">
-													<div className="col-lg-7 ">
-														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
-													</div>
-													<div className="col-lg-5">
-														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
-													</div>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-
-								<div className="col-lg-4">
-									<a href="">
-									<div className="service-widget p-3">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="">
-												<h5 className="color-blue">Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content mt-4">
-												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5  text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 text-center ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-													<div className="col-md-5 text-center  ">
-														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
-													</div>
-												</div>
-												<div className="row text-center mt-4">
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">$ 3000</h6>
-														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">1 Month</h6>
-														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
-													</div>
-													<div className="col-md-4">
-														<h6 className="font-sm font-weight-bold">Intermediate</h6>
-														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
-													</div>
-												</div>
-												<div className="mt-2">
-													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
-												</div>
-												<div className="row mt-4">
-													<div className="col-lg-7 ">
-														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
-													</div>
-													<div className="col-lg-5">
-														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
-													</div>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
 
 
 
 
 
 
-							{/* <div className="service-carousel">
+
+
+
+							<div className="service-carousel">
 								<div className="service-slider">
-									<Slider {...settings}>							
-										 <div className="service-widget p-2  ">
-											<div className="d-flex justify-content-between">
-												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
-												</div>
-												<div className="d-flex">
-													<img src={dislike} id="dislike" />
-													<img src={like} id="like" />
-												</div>
-											</div>
-											<div className="p-2">
-												<h5>Frilanx Redesign Project </h5>
-											</div>
-											<div className="service-content">
-												<div className="row ">
-													<div className="col-md-12">
-														<div className="row">
-															<div className="col-md-3">
-																<h6 className="card-items">Photoshop</h6>
-															</div>
-															<div className="col-md-3">
-																<h6 className="card-items">illustrator</h6>
-															</div>
-															<div className="col-md-3">
-																<h6 className="card-items">Java</h6>
-															</div>
-															<div className="col-md-3">
-																<h6 className="card-items">InDesign</h6>
-															</div>
-														</div>
-														<div className="row mt-2">
-															<div className="col-md-6">
-																<b>$3000</b>
-																<p>budget</p>
-															</div>
-															<div className="col-md-6">
-																<b>1 month</b>
-																<p>Duration</p>
-															</div>
-															<b>Intermediate</b>
-															<p>Experience level</p>
-															<h6>We have platform we wish to elevate in terms of UI and UX </h6>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>		
+									<Slider {...settings}>
 
 										<div className="service-widget">
 											<div className="service-img">
@@ -552,38 +134,234 @@ class Popular extends Component {
 												<div className="item-info">
 													<div className="service-user">
 														<a href="#">
-															<img src={user02} alt="" />
+															<img src={user01} alt="" />
 														</a>
-														<span className="service-price">$50</span>
+														<span className="service-price">$1000</span>
 													</div>
 													<div className="cate-list">
-														<a className="bg-yellow" href="service-details.html">Automobile</a>
+														<a className="bg-yellow" href="service-details.html">Job Post</a>
 													</div>
 												</div>
 											</div>
 											<div className="service-content">
 												<h3 className="title">
-													<a href="service-details.html">Car Repair Services</a>
+													<a href="service-details.html">Frilanax Redesign Project</a>
 												</h3>
-												<div className="rating">
+												<p>We have platform we wish to elevate in terms of UI and UX </p>
+												<div className="service-content">
+													<div className="row d-flex justify-content-around">
+														<div className="col-md-3 card-items">
+															<h6 >Photoshop</h6>
+														</div>
+														<div className="col-md-3 card-items ">
+															<h6 >illustrator</h6>
+														</div>
+														<div className="col-md-3 card-items">
+															<h6 className="text">JavaScript</h6>
+														</div>
+														<div className="col-md-3  card-items">
+															<h6 >InDesign</h6>
+														</div>
+													</div>
+													<div className="row">
+														<div className="col-md-6">
+															<b>Intermediate</b>
+															<p>Experience level</p>
+														</div>
+														<div className="col-md-6">
+															<b>1 month</b>
+															<p>Duration</p>
+														</div>
+													</div>
+													<div className="row d-flex justify-content-around">
+														<div className="col-lg-7 ">
+															<div className="d-flex Payment-Unverified">		<i class="fa fa-check" aria-hidden="true"></i>
+																<h6 >Payment Unverified</h6>
+															</div>
+														</div>
+														<div className="col-lg-5">
+															<div className="spend">
+																<h6>10k+ Spend</h6>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												{/* <div className="rating">
 													<i className="fas fa-star filled"></i>
 													<i className="fas fa-star filled"></i>
 													<i className="fas fa-star filled"></i>
 													<i className="fas fa-star filled"></i>
 													<i className="fas fa-star filled"></i>
 													<span className="d-inline-block average-rating">(5)</span>
-												</div>
-												<div className="user-info">
+												</div> */}
+												{/* <div className="user-info">
 													<div className="row">
 														<span className="col-auto ser-contact"><i className="fas fa-phone mr-1"></i> <span>xxxxxxxx85</span></span>
 														<span className="col ser-location"><span>Hanover, Maryland</span>  <i className="fas fa-map-marker-alt ml-1"></i></span>
 													</div>
+												</div> */}
+											</div>
+										</div>
+
+										<div className="service-widget">
+											<div className="service-img">
+												<a href="service-details.html">
+													<img className="img-fluid serv-img" alt="Service Image" src={service02} />
+												</a>
+												<div className="item-info">
+													<div className="service-user">
+														<a href="#">
+															<img src={user01} alt="" />
+														</a>
+														<span className="service-price">$2000</span>
+													</div>
+													<div className="cate-list">
+														<a className="bg-yellow" href="service-details.html">Job Post</a>
+													</div>
 												</div>
+											</div>
+											<div className="service-content">
+												<h3 className="title">
+													<a href="service-details.html">Frilanax Redesign Project</a>
+												</h3>
+												<p>We have platform we wish to elevate in terms of UI and UX </p>
+												<div className="service-content">
+													<div className="row d-flex justify-content-around">
+														<div className="col-md-3 card-items">
+															<h6 >Photoshop</h6>
+														</div>
+														<div className="col-md-3 card-items ">
+															<h6 >illustrator</h6>
+														</div>
+														<div className="col-md-3 card-items">
+															<h6 className="text">JavaScript</h6>
+														</div>
+														<div className="col-md-3  card-items">
+															<h6 >InDesign</h6>
+														</div>
+													</div>
+													<div className="row">
+														<div className="col-md-6">
+															<b>Intermediate</b>
+															<p>Experience level</p>
+														</div>
+														<div className="col-md-6">
+															<b>1 month</b>
+															<p>Duration</p>
+														</div>
+													</div>
+													<div className="row d-flex justify-content-around">
+														<div className="col-lg-7 ">
+															<div className="d-flex Payment-Unverified">		<i class="fa fa-check" aria-hidden="true"></i>
+																<h6 >Payment Unverified</h6>
+															</div>
+														</div>
+														<div className="col-lg-5">
+															<div className="spend">
+																<h6>10k+ Spend</h6>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												{/* <div className="rating">
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<span className="d-inline-block average-rating">(5)</span>
+												</div> */}
+												{/* <div className="user-info">
+													<div className="row">
+														<span className="col-auto ser-contact"><i className="fas fa-phone mr-1"></i> <span>xxxxxxxx85</span></span>
+														<span className="col ser-location"><span>Hanover, Maryland</span>  <i className="fas fa-map-marker-alt ml-1"></i></span>
+													</div>
+												</div> */}
+											</div>
+										</div>
+
+										<div className="service-widget">
+											<div className="service-img">
+												<a href="service-details.html">
+													<img className="img-fluid serv-img" alt="Service Image" src={service02} />
+												</a>
+												<div className="item-info">
+													<div className="service-user">
+														<a href="#">
+															<img src={user01} alt="" />
+														</a>
+														<span className="service-price">$3000</span>
+													</div>
+													<div className="cate-list">
+														<a className="bg-yellow" href="service-details.html">Job Post</a>
+													</div>
+												</div>
+											</div>
+											<div className="service-content">
+												<h3 className="title">
+													<a href="service-details.html">Frilanax Redesign Project</a>
+												</h3>
+												<p>We have platform we wish to elevate in terms of UI and UX </p>
+												<div className="service-content">
+													<div className="row d-flex justify-content-around">
+														<div className="col-md-3 card-items">
+															<h6 >Photoshop</h6>
+														</div>
+														<div className="col-md-3 card-items ">
+															<h6 >illustrator</h6>
+														</div>
+														<div className="col-md-3 card-items">
+															<h6 className="text">JavaScript</h6>
+														</div>
+														<div className="col-md-3  card-items">
+															<h6 >InDesign</h6>
+														</div>
+													</div>
+													<div className="row">
+														<div className="col-md-6">
+															<b>Intermediate</b>
+															<p>Experience level</p>
+														</div>
+														<div className="col-md-6">
+															<b>1 month</b>
+															<p>Duration</p>
+														</div>
+													</div>
+													<div className="row d-flex justify-content-around">
+														<div className="col-lg-7 ">
+															<div className="d-flex Payment-Unverified">		<i class="fa fa-check" aria-hidden="true"></i>
+																<h6 >Payment Unverified</h6>
+															</div>
+														</div>
+														<div className="col-lg-5">
+															<div className="spend">
+																<h6>10k+ Spend</h6>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												{/* <div className="rating">
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<i className="fas fa-star filled"></i>
+													<span className="d-inline-block average-rating">(5)</span>
+												</div> */}
+												{/* <div className="user-info">
+													<div className="row">
+														<span className="col-auto ser-contact"><i className="fas fa-phone mr-1"></i> <span>xxxxxxxx85</span></span>
+														<span className="col ser-location"><span>Hanover, Maryland</span>  <i className="fas fa-map-marker-alt ml-1"></i></span>
+													</div>
+												</div> */}
 											</div>
 										</div>
 									</Slider>
 								</div>
-							</div> */}
+							</div>
 
 
 						</div>
