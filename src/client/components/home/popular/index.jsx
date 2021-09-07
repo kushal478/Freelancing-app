@@ -115,10 +115,10 @@ class Popular extends Component {
 							<div className="row">
 								<div className="col-lg-4">
 									<a href="">
-										<div className="service-widget p-3">
+									<div className="service-widget p-3">
 											<div className="d-flex justify-content-between">
 												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
+													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
 												</div>
 												<div className="d-flex">
 													<img src={dislike} id="dislike" />
@@ -126,48 +126,48 @@ class Popular extends Component {
 												</div>
 											</div>
 											<div className="">
-												<h5>Frilanx Redesign Project </h5>
+												<h5 className="color-blue">Frilanx Redesign Project </h5>
 											</div>
-											<div className="service-content">
+											<div className="service-content mt-4">
 												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 >Photoshop</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >illustrator</h6>
+													<div className="col-md-5  text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
 												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 className="text">JavaScript</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >InDesign</h6>
+													<div className="col-md-5 text-center  ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
-												<div className="row">
-													<div className="col-md-6">
-														<b>$3000</b>
-														<p>budget</p>
+												<div className="row text-center mt-4">
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">$ 3000</h6>
+														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
 													</div>
-													<div className="col-md-6">
-														<b>1 month</b>
-														<p>Duration</p>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">1 Month</h6>
+														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
 													</div>
-													<b>Intermediate</b>
-													<p>Experience level</p>
-													<h6>We have platform we wish to elevate in terms of UI and UX </h6>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">Intermediate</h6>
+														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
+													</div>
 												</div>
-												<div className="row d-flex justify-content-around">
+												<div className="mt-2">
+													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
+												</div>
+												<div className="row mt-4">
 													<div className="col-lg-7 ">
-														<div className="d-flex Payment-Unverified">		<i class="fa fa-check" aria-hidden="true"></i>
-															<h6 >Payment Unverified</h6>
-														</div>
+														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
 													</div>
 													<div className="col-lg-5">
-														<div className="spend">
-															<h6>10k+ Spend</h6>
-														</div>
+														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
 													</div>
 												</div>
 											</div>
@@ -180,7 +180,7 @@ class Popular extends Component {
 										<div className="service-widget p-3">
 											<div className="d-flex justify-content-between">
 												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
+													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
 												</div>
 												<div className="d-flex">
 													<img src={dislike} id="dislike" />
@@ -188,48 +188,48 @@ class Popular extends Component {
 												</div>
 											</div>
 											<div className="">
-												<h5>Frilanx Redesign Project </h5>
+												<h5 className="color-blue">Frilanx Redesign Project </h5>
 											</div>
-											<div className="service-content">
+											<div className="service-content mt-4">
 												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 >Photoshop</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >illustrator</h6>
+													<div className="col-md-5  text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
 												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 className="text">JavaScript</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >InDesign</h6>
+													<div className="col-md-5 text-center  ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
-												<div className="row">
-													<div className="col-md-6">
-														<b>$3000</b>
-														<p>budget</p>
+												<div className="row text-center mt-4">
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">$ 3000</h6>
+														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
 													</div>
-													<div className="col-md-6">
-														<b>1 month</b>
-														<p>Duration</p>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">1 Month</h6>
+														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
 													</div>
-													<b>Intermediate</b>
-													<p>Experience level</p>
-													<h6>We have platform we wish to elevate in terms of UI and UX </h6>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">Intermediate</h6>
+														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
+													</div>
 												</div>
-												<div className="row d-flex justify-content-around">
+												<div className="mt-2">
+													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
+												</div>
+												<div className="row mt-4">
 													<div className="col-lg-7 ">
-														<div className="d-flex Payment-Unverified">		<i class="fa fa-check" aria-hidden="true"></i>
-															<h6 >Payment Unverified</h6>
-														</div>
+														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
 													</div>
 													<div className="col-lg-5">
-														<div className="spend">
-															<h6>10k+ Spend</h6>
-														</div>
+														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
 													</div>
 												</div>
 											</div>
@@ -239,10 +239,10 @@ class Popular extends Component {
 
 								<div className="col-lg-4">
 									<a href="">
-										<div className="service-widget p-3">
+									<div className="service-widget p-3">
 											<div className="d-flex justify-content-between">
 												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
+													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
 												</div>
 												<div className="d-flex">
 													<img src={dislike} id="dislike" />
@@ -250,48 +250,48 @@ class Popular extends Component {
 												</div>
 											</div>
 											<div className="">
-												<h5>Frilanx Redesign Project </h5>
+												<h5 className="color-blue">Frilanx Redesign Project </h5>
 											</div>
-											<div className="service-content">
+											<div className="service-content mt-4">
 												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 >Photoshop</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >illustrator</h6>
+													<div className="col-md-5  text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
 												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 className="text">JavaScript</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >InDesign</h6>
+													<div className="col-md-5 text-center  ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
-												<div className="row">
-													<div className="col-md-6">
-														<b>$3000</b>
-														<p>budget</p>
+												<div className="row text-center mt-4">
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">$ 3000</h6>
+														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
 													</div>
-													<div className="col-md-6">
-														<b>1 month</b>
-														<p>Duration</p>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">1 Month</h6>
+														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
 													</div>
-													<b>Intermediate</b>
-													<p>Experience level</p>
-													<h6>We have platform we wish to elevate in terms of UI and UX </h6>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">Intermediate</h6>
+														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
+													</div>
 												</div>
-												<div className="row d-flex justify-content-around">
+												<div className="mt-2">
+													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
+												</div>
+												<div className="row mt-4">
 													<div className="col-lg-7 ">
-														<div className="d-flex Payment-verified">		<i class="fa fa-check" aria-hidden="true"></i>
-															<h6 >Payment Verified</h6>
-														</div>
+														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
 													</div>
 													<div className="col-lg-5">
-														<div className="spend">
-															<h6>10k+ Spend</h6>
-														</div>
+														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
 													</div>
 												</div>
 											</div>
@@ -300,13 +300,13 @@ class Popular extends Component {
 								</div>
 							</div>
 
-							<div className="row mt-3">
+							<div className="row mt-4">
 								<div className="col-lg-4">
 									<a href="">
-										<div className="service-widget p-3">
+									<div className="service-widget p-3">
 											<div className="d-flex justify-content-between">
 												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
+													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
 												</div>
 												<div className="d-flex">
 													<img src={dislike} id="dislike" />
@@ -314,37 +314,49 @@ class Popular extends Component {
 												</div>
 											</div>
 											<div className="">
-												<h5>Frilanx Redesign Project </h5>
+												<h5 className="color-blue">Frilanx Redesign Project </h5>
 											</div>
-											<div className="service-content">
+											<div className="service-content mt-4">
 												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 >Photoshop</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >illustrator</h6>
+													<div className="col-md-5  text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
 												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 className="text">JavaScript</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >InDesign</h6>
+													<div className="col-md-5 text-center  ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
-												<div className="row">
-													<div className="col-md-6">
-														<b>$3000</b>
-														<p>budget</p>
+												<div className="row text-center mt-4">
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">$ 3000</h6>
+														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
 													</div>
-													<div className="col-md-6">
-														<b>1 month</b>
-														<p>Duration</p>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">1 Month</h6>
+														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
 													</div>
-													<b>Intermediate</b>
-													<p>Experience level</p>
-													<h6>We have platform we wish to elevate in terms of UI and UX </h6>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">Intermediate</h6>
+														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
+													</div>
+												</div>
+												<div className="mt-2">
+													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
+												</div>
+												<div className="row mt-4">
+													<div className="col-lg-7 ">
+														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
+													</div>
+													<div className="col-lg-5">
+														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -353,10 +365,10 @@ class Popular extends Component {
 
 								<div className="col-lg-4">
 									<a href="">
-										<div className="service-widget p-3">
+									<div className="service-widget p-3">
 											<div className="d-flex justify-content-between">
 												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
+													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
 												</div>
 												<div className="d-flex">
 													<img src={dislike} id="dislike" />
@@ -364,37 +376,49 @@ class Popular extends Component {
 												</div>
 											</div>
 											<div className="">
-												<h5>Frilanx Redesign Project </h5>
+												<h5 className="color-blue">Frilanx Redesign Project </h5>
 											</div>
-											<div className="service-content">
+											<div className="service-content mt-4">
 												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 >Photoshop</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >illustrator</h6>
+													<div className="col-md-5  text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
 												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 className="text">JavaScript</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >InDesign</h6>
+													<div className="col-md-5 text-center  ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
-												<div className="row">
-													<div className="col-md-6">
-														<b>$3000</b>
-														<p>budget</p>
+												<div className="row text-center mt-4">
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">$ 3000</h6>
+														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
 													</div>
-													<div className="col-md-6">
-														<b>1 month</b>
-														<p>Duration</p>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">1 Month</h6>
+														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
 													</div>
-													<b>Intermediate</b>
-													<p>Experience level</p>
-													<h6>We have platform we wish to elevate in terms of UI and UX </h6>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">Intermediate</h6>
+														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
+													</div>
+												</div>
+												<div className="mt-2">
+													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
+												</div>
+												<div className="row mt-4">
+													<div className="col-lg-7 ">
+														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
+													</div>
+													<div className="col-lg-5">
+														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -403,10 +427,10 @@ class Popular extends Component {
 
 								<div className="col-lg-4">
 									<a href="">
-										<div className="service-widget p-3">
+									<div className="service-widget p-3">
 											<div className="d-flex justify-content-between">
 												<div>
-													<a href=""><p>Fixed Price - 21 days ago</p></a>
+													<a href=""><h6 className="font-sm text-light-grey bold-none">Posted- 21 days ago</h6></a>
 												</div>
 												<div className="d-flex">
 													<img src={dislike} id="dislike" />
@@ -414,37 +438,49 @@ class Popular extends Component {
 												</div>
 											</div>
 											<div className="">
-												<h5>Frilanx Redesign Project </h5>
+												<h5 className="color-blue">Frilanx Redesign Project </h5>
 											</div>
-											<div className="service-content">
+											<div className="service-content mt-4">
 												<div className="row d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 >Photoshop</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >illustrator</h6>
+													<div className="col-md-5  text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
 												<div className="row mt-2  d-flex justify-content-around">
-													<div className="col-md-5 card-items">
-														<h6 className="text">JavaScript</h6>
+													<div className="col-md-5 text-center ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
-													<div className="col-md-5  card-items">
-														<h6 >InDesign</h6>
+													<div className="col-md-5 text-center  ">
+														<h6 className="font-sm bold-none py-1 px-2 border-radius bg-light-blue">Python</h6>
 													</div>
 												</div>
-												<div className="row">
-													<div className="col-md-6">
-														<b>$3000</b>
-														<p>budget</p>
+												<div className="row text-center mt-4">
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">$ 3000</h6>
+														<h6 className="font-sm text-light-grey bold-none">Budget</h6>
 													</div>
-													<div className="col-md-6">
-														<b>1 month</b>
-														<p>Duration</p>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">1 Month</h6>
+														<h6 className="font-sm text-light-grey bold-none">Duration</h6>
 													</div>
-													<b>Intermediate</b>
-													<p>Experience level</p>
-													<h6>We have platform we wish to elevate in terms of UI and UX </h6>
+													<div className="col-md-4">
+														<h6 className="font-sm font-weight-bold">Intermediate</h6>
+														<h6 className="font-sm text-light-grey bold-none">Experience Level</h6>
+													</div>
+												</div>
+												<div className="mt-2">
+													<h6 className="font-sm bold-none">We have a Platform we wish to elevate in terms of UI and UX</h6>
+												</div>
+												<div className="row mt-4">
+													<div className="col-lg-7 ">
+														<h6 className="font-sm bold-none py-1 px-2  border-radius bg-danger text-white"><i class="fa fa-check mr-2 round-bg-white" aria-hidden="true"></i>Payment Unverified</h6>
+													</div>
+													<div className="col-lg-5">
+														<h6 className="font-sm bold-none py-1 px-1 border-radius bg-sunlight text-center">10k+ Stipend</h6>
+													</div>
 												</div>
 											</div>
 										</div>

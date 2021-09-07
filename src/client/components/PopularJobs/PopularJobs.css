@@ -24,16 +24,65 @@
 	border-radius: 18px;
 }
 .card-items1{
-		color: whitesmoke;
-		background-color: #0b35c5;
-		border-radius: 25px;
-		padding-top: 5px;
-        margin-right: 5px;
-		}	
-	.card-items1 h6{
-		color: whitesmoke;
-	}
-    .card-border{
-        border: 1px solid black;
-        border-radius: 30px;
-    }
+	color: whitesmoke;
+	background-color: #0b35c5;
+	border-radius: 25px;
+	padding-top: 5px;
+    margin-right: 5px;
+}	
+.card-items1 h6{
+	color: whitesmoke;
+}
+.card-border{
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.font-sm 
+{
+	font-size: 14px;
+}
+ .text-light-grey
+ {
+	color:rgb(155, 155, 155)
+ }
+ .color-blue
+ {
+	color:#0b35c5
+ }
+ .bold-none
+ {
+	 font-weight: normal;
+ }
+ .border-radius
+ {	 
+	 border-radius: 20px;
+ }
+ .round-bg-white
+ {
+	 color:rgb(66, 177, 66);
+	 padding: 2px;
+	 background-color: white;
+	 border-radius: 100%;
+ }
+ .bg-sunlight
+ {
+	 background-color: rgb(231, 231, 124);
+ }
+ .bg-light-blue
+ {
+	 background-color: rgb(179, 179, 226);
+ }
+ .box-shadow
+ {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+ #parent
+ {
+	 position: relative;
+ }
+ .fixed-sidebar
+ {
+	 position:sticky !important;
+	 top: 87px;
+	 height: 100vh;
+ }
