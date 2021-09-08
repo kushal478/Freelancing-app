@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 import ReactDOM from "react-dom";
 //icon
 import { Modal } from 'react-bootstrap';
@@ -27,52 +28,72 @@ const Header = (props) => {
     root.classList.remove("menu-opened");
   };
 
-
-
-  useEffect(() => {
-
-    $(window).scroll(function () {
-      if ($(window).scrollTop() >= 30) {
-        $('.header').addClass('fixed-header');
-      } else {
-        $('.header').removeClass('fixed-header');
-      }
+  const [contact_number,setnumber] = useState("")
+  const update_number=(event)=>
+  {
+    setnumber(event.target.value);
+    console.log(contact_number)
+  }
+  const request_otp=(event)=>
+  {
+    
+    event.preventDefault();
+    console.log("event workin");
+    let request_otp_url=`http://159.65.95.188:4000/api/resend_otp`;
+    axios.post(request_otp_url, contact_number)
+    .then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
     });
-    $(".main-nav a").on("click", function (e) {
-      if ($(this).parent().hasClass("has-submenu")) {
-        e.preventDefault();
-      }
-      if (!$(this).hasClass("submenu")) {
-        $("ul", $(this).parents("ul:first")).slideUp(350);
-        $("a", $(this).parents("ul:first")).removeClass("submenu");
-        $(this).next("ul").slideDown(350);
-        $(this).addClass("submenu");
-      } else if ($(this).hasClass("submenu")) {
-        $(this).removeClass("submenu");
-        $(this).next("ul").slideUp(350);
-      }
-    });	// Mobile menu sidebar overlay
-  }, []);
+    setshow_otp_card(true)
+  }
+  // useEffect(() => {
+
+  //   $(window).scroll(function () {
+  //     if ($(window).scrollTop() >= 30) {
+  //       $('.header').addClass('fixed-header');
+  //     } else {
+  //       $('.header').removeClass('fixed-header');
+  //     }
+  //   });
+  //   $(".main-nav a").on("click", function (e) {
+  //     if ($(this).parent().hasClass("has-submenu")) {
+  //       e.preventDefault();
+  //     }
+  //     if (!$(this).hasClass("submenu")) {
+  //       $("ul", $(this).parents("ul:first")).slideUp(350);
+  //       $("a", $(this).parents("ul:first")).removeClass("submenu");
+  //       $(this).next("ul").slideDown(350);
+  //       $(this).addClass("submenu");
+  //     } else if ($(this).hasClass("submenu")) {
+  //       $(this).removeClass("submenu");
+  //       $(this).next("ul").slideUp(350);
+  //     }
+  //   });	// Mobile menu sidebar overlay
+  // }, []);
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
+  const [show_otp_card,setshow_otp_card]=useState(false)
+
   const onTitleChange = e => setTitle(e.target.value);
   const onBodyChange = e => setBody(e.target.value);
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  // const handleSubmit = e => {
+  //   e.preventDefault();
 
-    const data = { title, body };
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    };
-    fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
-      .then(response => response.json())
-      .then(res => console.log(res));
-  };
+  //   const data = { title, body };
+  //   const requestOptions = {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(data)
+  //   };
+  //   fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+  //     .then(response => response.json())
+  //     .then(res => console.log(res));
+  // };
 
 
   const openModal = () => setActivemodal("login");
@@ -291,20 +312,28 @@ const Header = (props) => {
           <Modal.Title><h3>Login <span>Frilanx</span></h3></Modal.Title>
         </Modal.Header>
 
+{/* this is our coding -------------------------------------------------------------- */}
+
         <div class="modal-body">
-          <form action="index.html">
-            {/* <div class="form-group form-focus">
-              <label class="focus-label">Email</label>
-              <input type="email" class="form-control" placeholder="truelysell@example.com" />
-            </div> */}
+          {
+            show_otp_card ?
+            <form>
+            <input type="text" placeholder="enter your otp here"/>
+            <button>click here</button>
+          </form>
+            :
+            <form>
             <div class="form-group form-focus">
-              <label class="focus-label">Contact Number</label>
-              <input type="tel" class="form-control" placeholder="Type your contact no. here..." />
+              <label class="focus-label">contact number</label>
+              <input type="tel" class="form-control" placeholder="contact number" value={contact_number}  onChange={update_number} required/>
             </div>
 
             <div class="text-right">
             </div>
-            <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
+            <input type="submit" className="btn btn-primary btn-block btn-lg login-btn" onClick={request_otp}/>
+            {/* <button class="btn btn-primary btn-block btn-lg login-btn"  onClick={request_otp}>Login</button> */}
+ {/* this is our coding -------------------------------------------------------------- */}
+            
             <div class="login-or">	<span class="or-line"></span>
               <span class="span-or">or</span>
             </div>
@@ -317,6 +346,8 @@ const Header = (props) => {
             <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a>
             </div>
           </form>
+          }
+          
         </div>
       </Modal>
 
