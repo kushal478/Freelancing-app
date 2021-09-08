@@ -54,7 +54,30 @@ const Header = (props) => {
     });	// Mobile menu sidebar overlay
   }, []);
 
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+
+  const onTitleChange = e => setTitle(e.target.value);
+  const onBodyChange = e => setBody(e.target.value);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const data = { title, body };
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    };
+    fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+      .then(response => response.json())
+      .then(res => console.log(res));
+  };
+
+
   const openModal = () => setActivemodal("login");
+  const openModal2 = () => setActivemodal("user");
+
 
   const handleCloseModal = () => setActivemodal("close");
 
@@ -204,11 +227,11 @@ const Header = (props) => {
             <li className={pathnames.includes("admin") ? "active" : ""}>
               <Link to="/admin">Profile</Link>
             </li>
+            <li className={pathnames.includes("change-password") ? "active" : ""}>
+              <Link to="#" onClick={() => openModal2("user")}>Register</Link>
+            </li>
             {/* <li className={pathnames.includes("change-password") ? "active" : ""}>
-              <Link to="#" onClick={() => openModal("user")}>Become a Professional</Link>
-            </li> */}
-            {/* <li className={pathnames.includes("change-password") ? "active" : ""}>
-              <Link to="#" onClick={() => openModal("user")}>Become a User</Link>
+              <Link to="#" onClick={() => openModal("user")}>Become a Employer</Link>
             </li> */}
           </ul>
         </div>
@@ -265,19 +288,20 @@ const Header = (props) => {
 
       <Modal show={activeModal === 'login'} onHide={() => handleCloseModal()} centered >
         <Modal.Header closeButton>
-          <Modal.Title><h3>Login <span>Truelysell</span></h3></Modal.Title>
+          <Modal.Title><h3>Login <span>Frilanx</span></h3></Modal.Title>
         </Modal.Header>
 
         <div class="modal-body">
           <form action="index.html">
-            <div class="form-group form-focus">
+            {/* <div class="form-group form-focus">
               <label class="focus-label">Email</label>
               <input type="email" class="form-control" placeholder="truelysell@example.com" />
-            </div>
+            </div> */}
             <div class="form-group form-focus">
-              <label class="focus-label">Password</label>
-              <input type="password" class="form-control" placeholder="********" />
+              <label class="focus-label">Contact Number</label>
+              <input type="tel" class="form-control" placeholder="Type your contact no. here..." />
             </div>
+
             <div class="text-right">
             </div>
             <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
@@ -295,9 +319,11 @@ const Header = (props) => {
           </form>
         </div>
       </Modal>
+
+
       <Modal show={activeModal === 'user'} onHide={() => handleCloseModal()} centered >
         <Modal.Header closeButton>
-          <Modal.Title><h3>Login <span>Join as a User</span></h3></Modal.Title>
+          <Modal.Title><h3>Register To <span>Join Frilanx</span></h3></Modal.Title>
         </Modal.Header>
 
         <div class="modal-body">
@@ -363,7 +389,7 @@ const Header = (props) => {
             </div>
             <div class="row form-row social-login">
               <div class="col-6">
-                <a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
+                {/* <a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a> */}
               </div>
               <div class="col-6">
                 <a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
