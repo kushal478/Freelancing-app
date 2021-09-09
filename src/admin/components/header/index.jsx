@@ -51,7 +51,6 @@ class Header extends Component {
 
   }
 
-
   render() {
     const exclusionArray = [
       "/admin/login",
