@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from "react-dom";
 //icon
 import { Modal } from 'react-bootstrap';
@@ -27,27 +29,41 @@ const Header = (props) => {
     var root = document.getElementsByTagName("html")[0];
     root.classList.remove("menu-opened");
   };
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
 
-  const [contact_number,setnumber] = useState("")
-  const update_number=(event)=>
-  {
-    setnumber(event.target.value);
-    console.log(contact_number)
+  const [show_otp_card, setshow_otp_card] = useState(false)
+
+  const onTitleChange = e => setTitle(e.target.value);
+  const onBodyChange = e => setBody(e.target.value);
+  const [input, setinput] = useState("");
+
+
+  const inputupdate = (event) => {
+    setinput(event.target.value)
+    console.log(input)
   }
-  const request_otp=(event)=>
-  {
-    
-    event.preventDefault();
-    console.log("event workin");
-    let request_otp_url=`http://159.65.95.188:4000/api/resend_otp`;
-    axios.post(request_otp_url, contact_number)
-    .then((response) => {
-      console.log(response);
-    }, (error) => {
-      console.log(error);
-    });
-    setshow_otp_card(true)
+  const request_otp = (event) => {
+    event.preventDefault()
+    if (input.match(/^(\+\d{1,3}[- ]?)?\d{10}$/) && !(input.match(/0{5,}/))) {
+       toast.success("please check the otp in mobile number");
+       setinput("")
+      setshow_otp_card(true) 
+      let request_otp_url = `http://159.65.95.188:4000/api/resend_otp`;
+      axios.post(request_otp_url, contact_number)
+        .then((response) => {
+          console.log(response);
+        }, (error) => {
+          console.log(error);
+        });
+     
+    }
+    else {
+     toast.error("Please enter a valid number")
+    }
+
   }
+
   // useEffect(() => {
 
   //   $(window).scroll(function () {
@@ -73,13 +89,7 @@ const Header = (props) => {
   //   });	// Mobile menu sidebar overlay
   // }, []);
 
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
 
-  const [show_otp_card,setshow_otp_card]=useState(false)
-
-  const onTitleChange = e => setTitle(e.target.value);
-  const onBodyChange = e => setBody(e.target.value);
 
   // const handleSubmit = e => {
   //   e.preventDefault();
@@ -106,7 +116,7 @@ const Header = (props) => {
 
 
     <header className="header home">
-
+ <ToastContainer />
       <nav className="navbar navbar-expand-lg header-nav">
         <div className="navbar-header">
           <a href="#0" id="mobile_btn" onClick={() => onHandleMobileMenu()}>
@@ -312,42 +322,64 @@ const Header = (props) => {
           <Modal.Title><h3>Login <span>Frilanx</span></h3></Modal.Title>
         </Modal.Header>
 
-{/* this is our coding -------------------------------------------------------------- */}
+        {/* this is our coding -------------------------------------------------------------- */}
 
         <div class="modal-body">
           {
             show_otp_card ?
-            <form>
-            <input type="text" placeholder="enter your otp here"/>
-            <button>click here</button>
-          </form>
-            :
-            <form>
-            <div class="form-group form-focus">
-              <label class="focus-label">contact number</label>
-              <input type="tel" class="form-control" placeholder="contact number" value={contact_number}  onChange={update_number} required/>
-            </div>
+              <form>
+                {/* <input type="text" placeholder="enter your otp here" /> */}
+                <div className="row">
+                  <div className="col-md-2">
+                    <input  type="text" placeholder="*" class="form-control"  required />
+                  </div>
+                  <div className="col-md-2">
+                    <input  type="text" placeholder="*" class="form-control"  required />
+                  </div>
+                  <div className="col-md-2">
+                    <input  type="text" placeholder="*" class="form-control"  required />
+                  </div>
+                  <div className="col-md-2">
+                    <input  type="text" placeholder="*" class="form-control"  required />
+                  </div>
+                </div>
+                <input type="submit" value="submit" className="btn btn-primary btn-block btn-lg login-btn" />
+              </form>
+              :
+              // <form onSubmit={request_otp}>
+              //   <input value={input} type="text" onChange={inputupdate} />
+              //   <input type="submit" value="submit" />
+              //   {/* <ToastContainer /> */}
 
-            <div class="text-right">
-            </div>
-            <input type="submit" className="btn btn-primary btn-block btn-lg login-btn" onClick={request_otp}/>
-            {/* <button class="btn btn-primary btn-block btn-lg login-btn"  onClick={request_otp}>Login</button> */}
- {/* this is our coding -------------------------------------------------------------- */}
-            
-            <div class="login-or">	<span class="or-line"></span>
-              <span class="span-or">or</span>
-            </div>
-            <div class="row form-row social-login">
-              <div class="col-6">	<a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
-              </div>
-              <div class="col-6">	<a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
-              </div>
-            </div>
-            <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a>
-            </div>
-          </form>
+              // </form>
+                        <form onSubmit={request_otp}>
+                        <div class="form-group form-focus">
+                          <label class="focus-label">contact number</label>
+                          {/* <input type="tel" class="form-control" placeholder="contact number" value={contact_number}  onChange={update_number} required/> */}
+                          <input value={input}  type="text" class="form-control" onChange={inputupdate} required />
+                        </div>
+
+                        <div class="text-right">
+                        </div>
+                        <input type="submit" value="submit" className="btn btn-primary btn-block btn-lg login-btn" />
+                       
+                        {/* <button class="btn btn-primary btn-block btn-lg login-btn"  onClick={request_otp}>Login</button> */}
+             {/* this is our coding -------------------------------------------------------------- */}
+
+                        <div class="login-or">	<span class="or-line"></span>
+                          <span class="span-or">or</span>
+                        </div>
+                        <div class="row form-row social-login">
+                          <div class="col-6">	<a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
+                          </div>
+                          <div class="col-6">	<a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
+                          </div>
+                        </div>
+                        <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a>
+                        </div>
+                      </form>
           }
-          
+
         </div>
       </Modal>
 
