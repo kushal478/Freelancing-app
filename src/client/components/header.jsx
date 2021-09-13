@@ -37,8 +37,8 @@ const Header = (props) => {
   const onTitleChange = e => setTitle(e.target.value);
   const onBodyChange = e => setBody(e.target.value);
   const [input, setinput] = useState("");
-
-
+  const [correct_mobile_number, setcorrect_mobile_state] = useState("");
+  const [wrong_mobile_number, setwrogn_mobile_state] = useState("");
   const inputupdate = (event) => {
     setinput(event.target.value)
     console.log(input)
@@ -46,9 +46,9 @@ const Header = (props) => {
   const request_otp = (event) => {
     event.preventDefault()
     if (input.match(/^(\+\d{1,3}[- ]?)?\d{10}$/) && !(input.match(/0{5,}/))) {
-       toast.success("please check the otp in mobile number");
-       setinput("")
-      setshow_otp_card(true) 
+      setinput("");
+      setcorrect_mobile_state("Please enter your otp in provided Number.")
+      setshow_otp_card(true)
       let request_otp_url = `http://159.65.95.188:4000/api/resend_otp`;
       axios.post(request_otp_url, contact_number)
         .then((response) => {
@@ -56,10 +56,9 @@ const Header = (props) => {
         }, (error) => {
           console.log(error);
         });
-     
     }
     else {
-     toast.error("Please enter a valid number")
+      setwrogn_mobile_state("Please enter your otp in provided Number.")
     }
 
   }
@@ -116,7 +115,7 @@ const Header = (props) => {
 
 
     <header className="header home">
- <ToastContainer />
+      <ToastContainer />
       <nav className="navbar navbar-expand-lg header-nav">
         <div className="navbar-header">
           <a href="#0" id="mobile_btn" onClick={() => onHandleMobileMenu()}>
@@ -331,17 +330,20 @@ const Header = (props) => {
                 {/* <input type="text" placeholder="enter your otp here" /> */}
                 <div className="row">
                   <div className="col-md-2">
-                    <input  type="text" placeholder="*" class="form-control"  required />
+                    <input type="text" placeholder="*" class="form-control" required />
                   </div>
                   <div className="col-md-2">
-                    <input  type="text" placeholder="*" class="form-control"  required />
+                    <input type="text" placeholder="*" class="form-control" required />
                   </div>
                   <div className="col-md-2">
-                    <input  type="text" placeholder="*" class="form-control"  required />
+                    <input type="text" placeholder="*" class="form-control" required />
                   </div>
                   <div className="col-md-2">
-                    <input  type="text" placeholder="*" class="form-control"  required />
+                    <input type="text" placeholder="*" class="form-control" required />
                   </div>
+                </div>
+                <div className="my-3">
+                  <p className="text-success">{correct_mobile_number}</p>
                 </div>
                 <input type="submit" value="submit" className="btn btn-primary btn-block btn-lg login-btn" />
               </form>
@@ -352,32 +354,35 @@ const Header = (props) => {
               //   {/* <ToastContainer /> */}
 
               // </form>
-                        <form onSubmit={request_otp}>
-                        <div class="form-group form-focus">
-                          <label class="focus-label">contact number</label>
-                          {/* <input type="tel" class="form-control" placeholder="contact number" value={contact_number}  onChange={update_number} required/> */}
-                          <input value={input}  type="text" class="form-control" onChange={inputupdate} required />
-                        </div>
+              <form onSubmit={request_otp}>
+                <div class="form-group form-focus">
+                  <label class="focus-label">contact number</label>
+                  {/* <input type="tel" class="form-control" placeholder="contact number" value={contact_number}  onChange={update_number} required/> */}
+                  <input value={input} type="text" class="form-control" onChange={inputupdate} required />
+                </div>
+                <div className="mt-2">
+                  <p className="text-danger">{wrong_mobile_number}</p>
+                </div>
 
-                        <div class="text-right">
-                        </div>
-                        <input type="submit" value="submit" className="btn btn-primary btn-block btn-lg login-btn" />
-                       
-                        {/* <button class="btn btn-primary btn-block btn-lg login-btn"  onClick={request_otp}>Login</button> */}
-             {/* this is our coding -------------------------------------------------------------- */}
+                <div class="text-right">
+                </div>
+                <input type="submit" value="submit" className="btn btn-primary btn-block btn-lg login-btn" />
 
-                        <div class="login-or">	<span class="or-line"></span>
-                          <span class="span-or">or</span>
-                        </div>
-                        <div class="row form-row social-login">
-                          <div class="col-6">	<a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
-                          </div>
-                          <div class="col-6">	<a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
-                          </div>
-                        </div>
-                        <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a>
-                        </div>
-                      </form>
+            
+                {/* this is our coding -------------------------------------------------------------- */}
+
+                <div class="login-or">	<span class="or-line"></span>
+                  <span class="span-or">or</span>
+                </div>
+                <div class="row form-row social-login">
+                  <div class="col-6">	<a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
+                  </div>
+                  <div class="col-6">	<a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
+                  </div>
+                </div>
+                <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a>
+                </div>
+              </form>
           }
 
         </div>
