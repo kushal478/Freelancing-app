@@ -40,7 +40,8 @@ const Header = (props) => {
   const [correct_mobile_number, setcorrect_mobile_state] = useState("");
   const [wrong_mobile_number, setwrogn_mobile_state] = useState("");
   const inputupdate = (event) => {
-    setinput(event.target.value)
+    setinput(event.target.value);
+    setwrogn_mobile_state("")
     console.log(input)
   }
   const request_otp = (event) => {
@@ -109,7 +110,14 @@ const Header = (props) => {
   const openModal2 = () => setActivemodal("user");
 
 
-  const handleCloseModal = () => setActivemodal("close");
+  const handleCloseModal = () => 
+  {
+    setActivemodal("close");
+    setinput("");
+    setwrogn_mobile_state("");
+    setshow_otp_card(false)
+
+  }
 
   return (
 
