@@ -2674,11 +2674,14 @@ border-radius: 20px;
     margin-bottom: 10px;
 	font-weight:400;
 }
-.btn-facebook {
+.btn-facebook1 {
     background-color: #3a559f;
     color: #fff;
     font-size: 13px;
     padding: 8px 12px;
+}
+.fontAwesome {
+  font-family: Helvetica, 'FontAwesome', sans-serif;
 }
 .btn-google {
     background-color: #dd4b39;
